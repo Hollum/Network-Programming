@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jorho/Documents/Programmering/Nettverksprogrammering/O2 - Worker threads/test.cpp
+mutex
+-
+iostream
+-
+vector
+-
+thread
+-
+functional
+-
+list
+-
+condition_variable
+-
+atomic
+-
+

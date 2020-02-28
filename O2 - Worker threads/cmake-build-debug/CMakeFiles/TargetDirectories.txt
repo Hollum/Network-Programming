@@ -1,0 +1,3 @@
+/home/jorho/Documents/Programmering/Nettverksprogrammering/O2 - Worker threads/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/jorho/Documents/Programmering/Nettverksprogrammering/O2 - Worker threads/cmake-build-debug/CMakeFiles/cpp.dir
+/home/jorho/Documents/Programmering/Nettverksprogrammering/O2 - Worker threads/cmake-build-debug/CMakeFiles/edit_cache.dir
