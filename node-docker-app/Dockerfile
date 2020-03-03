@@ -1,0 +1,8 @@
+FROM node:10
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD sudo pacman -Sy gcc
+CMD node app.js
+EXPOSE 8888
