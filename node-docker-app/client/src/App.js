@@ -13,6 +13,7 @@ export class Input extends Component{
     constructor(props) {
         super(props);
         this.state = {
+            input: "",
             output: ""
         };
 
@@ -20,18 +21,22 @@ export class Input extends Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+   /*
     componentDidMount() {
-        CodeService.test()
-            .then(res => console.log(res.data))
+        CodeService.getOutput()
+            .then(res => this.setState({output: res.data.output}))
             .catch(rej => console.log(rej));
     }
 
+    */
     handleChange(event) {
-        this.setState({output: event.target.value});
+        this.setState({input: event.target.value});
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.output);
+        CodeService.sendInput(this.state.input)
+            .then(res => this.setState({output: res.data.output}))
+            .catch(rej => console.log(rej));
         event.preventDefault();
     }
     render() {
@@ -40,10 +45,11 @@ export class Input extends Component{
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="code">Skriv inn C++ kode her</label>
-                        <textarea className="form-control" id="code" rows="8" value={this.state.output} onChange={this.handleChange}></textarea>
+                        <textarea className="form-control" id="code" rows="8" value={this.state.input} onChange={this.handleChange}></textarea>
                         <input type="submit" value="Submit"/>
                     </div>
                 </form>
+                <h1>{this.state.output}</h1>
             </div>
 
         );

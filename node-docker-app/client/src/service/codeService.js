@@ -12,12 +12,12 @@ export class CodeService {
 
     }
 
+    static getOutput(){
+        return axios.get('http://localhost:8888/run/code');
+    }
 
-    static test(){
-        let header = {
-            "Content-Type": "application/json",
-        };
-        return axios.post('localhost:8888/products/1');
+    static sendInput(code){
+        return axios.post('http://localhost:8888/run/code', {input : code});
     }
 
     static getCode(callback){
