@@ -17,8 +17,6 @@ export class CodeService {
         let header = {
             "Content-Type": "application/json",
         };
-        axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-        axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
         return axios.post('localhost:8888/products/1');
     }
 
