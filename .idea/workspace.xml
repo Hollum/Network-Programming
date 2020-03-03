@@ -10,16 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="579fd955-e851-478f-bacc-931b6ba7769e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/cpp/.clang-format" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/cpp/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/cpp/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/O1 - Find prime number/cpp/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/rust/.rust-format" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/rust/Cargo.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/rust/Cargo.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/rust/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/O1 - Find prime number" beforeDir="false" afterPath="$PROJECT_DIR$/O1 - Find prime number" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/cpp/main.cpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +22,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/threads" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/O1 - Find prime number" />
   </component>
   <component name="ProjectId" id="1Y4a6yA7JXUYvJ7VsFArgbfvEhh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -43,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.advertisement.text.has.clang-format" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/O3 - Docker" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -63,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582204148866</updated>
       <workItem from="1582204150472" duration="850000" />
+      <workItem from="1582890826553" duration="35000" />
     </task>
     <servers />
   </component>
@@ -76,10 +69,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl" timestamp="1582204464010">
+    <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl" timestamp="1582890859897">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
-    <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1582204464010" />
+    <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1582890859897" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1582204999866">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
