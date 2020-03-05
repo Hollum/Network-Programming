@@ -24,8 +24,9 @@ app.get('/run/code', (req, res) => {
     compile('g++ -o hello hello.cpp', () => {
         //Run code
         exec('./hello', (err, stdout, stderr) => {
-            if (err) {
+            if (err || stderr) {
                 console.error(`exec error: ${err}`);
+                res.json({output: "Det skjedde en feil, sjekk syntax."});
                 return;
             }
             console.log(`Kompilert kode: ${stdout}`);
@@ -36,7 +37,7 @@ app.get('/run/code', (req, res) => {
 
 });
 
-/*
+
 app.post('/run/code', (req, res) => {
     let code = req.body.input;
     fs.writeFile("hello.cpp", code, () => {
@@ -45,6 +46,12 @@ app.post('/run/code', (req, res) => {
             exec('./hello', (err, stdout, stderr) => {
                 if (err) {
                     console.error(`exec error: ${err}`);
+                    res.json({output: err});
+                    return;
+                }
+                if (stderr) {
+                    console.log(`stderr: ${stderr}`);
+                    res.json({output: stderr});
                     return;
                 }
                 console.log(`Kompilert kode: ${stdout}`);
@@ -54,49 +61,6 @@ app.post('/run/code', (req, res) => {
         })
     });
 });
-
- */
-
-app.post('/run/code', (req, res) => {
-    let code = req.body.input;
-    writeToFile(code, () => {
-        compile('g++ -o hello hello.cpp', () => {
-            //Run code
-            exec('./hello', (err, stdout, stderr) => {
-                if (err) {
-                    console.error(`exec error: ${err}`);
-                    return;
-                }
-                console.log(`Kompilert kode: ${stdout}`);
-                res.json({output: stdout})
-
-            });
-        })
-    });
-});
-
-/*
-function writeToFile(code, callback){
-    try{
-        fs.writeFile("hello.cpp", code, () => callback);
-    } catch(exception){
-        console.log(exception);
-    }
-
-}
- */
-
-
-
-function writeToFile(code, callback){
-    try{
-        fs.writeFileSync("hello.cpp", code);
-        callback();
-    } catch(exception){
-        console.log(exception);
-    }
-
-}
 
 
 function compile(command, callback){
@@ -104,8 +68,9 @@ function compile(command, callback){
         if (err) {
             console.error(`exec error: ${err}`);
         }
+        callback();
     });
-    callback();
+
 }
 
 
