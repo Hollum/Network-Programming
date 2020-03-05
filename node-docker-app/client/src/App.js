@@ -21,14 +21,6 @@ export class Input extends Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-   /*
-    componentDidMount() {
-        CodeService.getOutput()
-            .then(res => this.setState({output: res.data.output}))
-            .catch(rej => console.log(rej));
-    }
-
-    */
     handleChange(event) {
         this.setState({input: event.target.value});
     }
