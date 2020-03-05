@@ -3,20 +3,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Run node-docker-app
 
 Change directory to server:
-###`$cd server`
+`$cd server`
 
-###`$npm install`
+`$npm install`
 
 Build the docker on your computer
-###`$docker build -t hello-docker .`
+`$docker build -t hello-docker .`
 
 Runs the docker "hello-docker"
-###`$docker run -it -p 8888:4000 hello-docker .`
+`$docker run -it -p 8888:4000 hello-docker .`
 
 Change directory to client:
-###`$cd ../client`
+`$cd ../client`
 
-###`$npm install`
+`$npm install`
 
 ### `$npm start`
 
