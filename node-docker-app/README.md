@@ -10,7 +10,7 @@ Change directory to server:
 Build the docker on your computer
 `$docker build -t hello-docker .`
 
-Runs the docker "hello-docker"
+Run the docker "hello-docker"
 `$docker run -it -p 8888:4000 hello-docker .`
 
 Change directory to client:
