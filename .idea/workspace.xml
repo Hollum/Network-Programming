@@ -10,8 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="579fd955-e851-478f-bacc-931b6ba7769e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number" beforeDir="false" afterPath="$PROJECT_DIR$/O1 - Find prime number" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/O1 - Find prime number/cpp/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +33,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="cf.advertisement.text.has.clang-format" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/O3 - Docker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -56,6 +56,7 @@
       <updated>1582204148866</updated>
       <workItem from="1582204150472" duration="850000" />
       <workItem from="1582890826553" duration="35000" />
+      <workItem from="1583504027215" duration="121000" />
     </task>
     <servers />
   </component>
@@ -69,10 +70,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl" timestamp="1582890859897">
+    <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl" timestamp="1583504099972">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
-    <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1582890859897" />
+    <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1583504099972" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1582204999866">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
@@ -109,5 +110,13 @@
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
     <state x="456" y="157" key="SettingsEditor/0.0.1920.1043@0.0.1920.1043" timestamp="1582204292884" />
+    <state x="639" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1583504027824">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="639" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1043@0.0.1920.1043" timestamp="1583504027824" />
+    <state x="335" y="110" width="1243" height="822" key="new project wizard" timestamp="1583504144803">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="335" y="110" width="1243" height="822" key="new project wizard/0.0.1920.1043@0.0.1920.1043" timestamp="1583504144803" />
   </component>
 </project>
