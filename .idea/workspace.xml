@@ -10,7 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="579fd955-e851-478f-bacc-931b6ba7769e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/SSL/src/javasslclient/JavaSSLClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/udp-socket-app/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ClientUDP.class" beforeDir="false" afterPath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ClientUDP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ConnectionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ServerUDP.class" beforeDir="false" afterPath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ServerUDP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/udp-socket-app/src/ClientUDP.java" beforeDir="false" afterPath="$PROJECT_DIR$/udp-socket-app/src/ClientUDP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/udp-socket-app/src/ServerUDP.java" beforeDir="false" afterPath="$PROJECT_DIR$/udp-socket-app/src/ServerUDP.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +65,8 @@
       <workItem from="1582204150472" duration="850000" />
       <workItem from="1582890826553" duration="35000" />
       <workItem from="1583504027215" duration="121000" />
+      <workItem from="1584359995963" duration="19000" />
+      <workItem from="1584360148518" duration="7000" />
     </task>
     <servers />
   </component>
@@ -70,9 +80,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl" timestamp="1583504099972">
-      <screen x="0" y="0" width="1920" height="1043" />
+    <state x="2663" y="290" width="428" height="484" key="FileChooserDialogImpl" timestamp="1584360012390">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2663" y="290" key="FileChooserDialogImpl/0.0.1920.1043/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584360012390" />
     <state x="743" y="280" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1583504099972" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1582204999866">
       <screen x="0" y="0" width="1920" height="1043" />

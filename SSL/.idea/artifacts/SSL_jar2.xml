@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="SSL:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/SSL_jar2</output-path>
+    <root id="root">
+      <element id="archive" name="SSL.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/javasslserver/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="SSL" />
+      </element>
+    </root>
+  </artifact>
+</component>

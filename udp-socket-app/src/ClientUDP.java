@@ -18,7 +18,6 @@ public class ClientUDP {
             i = oneLine;
             byte[] b = (i).getBytes();
             DatagramPacket dp = new DatagramPacket(b, b.length, ia,9999);
-            //Send dp to socket
             ds.send(dp);
 
             byte[] b1 = new byte[1024];

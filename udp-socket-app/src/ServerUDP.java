@@ -7,13 +7,6 @@ public class ServerUDP {
         DatagramSocket ds = new DatagramSocket(9999);
 
 
-      /*
-        String str = new String(dp.getData());
-        System.out.println(str);
-       */
-        //int num = Integer.parseInt(str.trim());
-        //int result = num*num;
-
         byte[] b1 = new byte[1024];
 
         while (true){
@@ -62,9 +55,6 @@ public class ServerUDP {
             DatagramPacket dp1 = new DatagramPacket(b2, b2.length, ia, dp.getPort());
             ds.send(dp1);
         }
-
-        //Send data
-
 
     }
 }
