@@ -21,7 +21,7 @@ public class Server {
             connection = ss.accept();
             ConnectionHandler t = new ConnectionHandler(connection);
             t.start();
-            connections.add(t); // Don't really need this, but have connections in reference if needed later on.
+            connections.add(t);
         }
     }
 }
