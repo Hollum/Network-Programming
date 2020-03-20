@@ -1,0 +1,5 @@
+//Run server
+ java -jar -Djavax.net.ssl.keyStore=examplestore -Djavax.net.ssl.keyStorePassword=password "./JavaSSLServer.jar"
+
+ //Run client
+ java -jar -Djavax.net.ssl.trustStore=examplestore -Djavax.net.ssl.trustStorePassword=password "./JavaSSLClient.jar"

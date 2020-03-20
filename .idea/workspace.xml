@@ -10,15 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="579fd955-e851-478f-bacc-931b6ba7769e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SSL/src/javasslclient/JavaSSLClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udp-socket-app/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SSL/src/commands" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ClientUDP.class" beforeDir="false" afterPath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ClientUDP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ConnectionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ServerUDP.class" beforeDir="false" afterPath="$PROJECT_DIR$/udp-socket-app/out/production/udp-socket-app/ServerUDP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/udp-socket-app/src/ClientUDP.java" beforeDir="false" afterPath="$PROJECT_DIR$/udp-socket-app/src/ClientUDP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/udp-socket-app/src/ServerUDP.java" beforeDir="false" afterPath="$PROJECT_DIR$/udp-socket-app/src/ServerUDP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSL/out/artifacts/SSL_jar/SSL.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSL/out/artifacts/SSL_jar2/SSL.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSL/out/artifacts/SSL_jar2/SSL.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +24,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/O1 - Find prime number" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Y4a6yA7JXUYvJ7VsFArgbfvEhh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -67,6 +62,8 @@
       <workItem from="1583504027215" duration="121000" />
       <workItem from="1584359995963" duration="19000" />
       <workItem from="1584360148518" duration="7000" />
+      <workItem from="1584656408507" duration="21000" />
+      <workItem from="1584696908242" duration="23000" />
     </task>
     <servers />
   </component>
@@ -121,10 +118,11 @@
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
     <state x="456" y="157" key="SettingsEditor/0.0.1920.1043@0.0.1920.1043" timestamp="1582204292884" />
-    <state x="639" y="348" key="com.intellij.ide.util.TipDialog" timestamp="1583504027824">
-      <screen x="0" y="0" width="1920" height="1043" />
+    <state x="559" y="328" key="com.intellij.ide.util.TipDialog" timestamp="1584656410009">
+      <screen x="0" y="23" width="1680" height="914" />
     </state>
     <state x="639" y="348" key="com.intellij.ide.util.TipDialog/0.0.1920.1043@0.0.1920.1043" timestamp="1583504027824" />
+    <state x="559" y="328" key="com.intellij.ide.util.TipDialog/0.23.1680.914@0.23.1680.914" timestamp="1584656410009" />
     <state x="335" y="110" width="1243" height="822" key="new project wizard" timestamp="1583504144803">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
