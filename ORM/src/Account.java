@@ -10,20 +10,23 @@ public class Account implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String owner;
-    private double accountNumber;
+    private int accountNumber;
     private double balance;
 
 
     public Account(){}
-    public Account(String owner, double accountNumber){
+    public Account(String owner, int accountNumber){
         this.owner = owner;
         this.accountNumber = accountNumber;
         this.balance = 0;
     }
 
     public void withdraw(double money){
-         double newBalance = this.balance - money;
-         this.balance = newBalance;
+        this.balance = this.balance - money;
+    }
+
+    public void reciveMoney(double money){
+        this.balance = this.balance + money;
     }
 
     public String getOwner() {
@@ -38,7 +41,7 @@ public class Account implements Serializable {
         return accountNumber;
     }
 
-    public void setAccountNumber(double accountNumber) {
+    public void setAccountNumber(int accountNumber) {
         this.accountNumber = accountNumber;
     }
 
