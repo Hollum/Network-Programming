@@ -80,6 +80,12 @@ public class AccountDAO {
 
             account = new Account("Sofie Brittesen", 987654321);
             facade.saveAccount(account);
+
+            //Changing account number to Sofie Brittesen from 987654321 to 66666666
+            account.setAccountNumber(66666666);
+            facade.changeAccount(account);
+
+
             List<Account> list = facade.getAllAccounts();
             for(Account a : list){
                 System.out.println("---- " + a );
@@ -90,6 +96,7 @@ public class AccountDAO {
             for(Account a : list2){
                 System.out.println("---- " + a );
             }
+
 
         } finally {
             if(emf != null)
