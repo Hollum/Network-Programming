@@ -1,0 +1,4 @@
+Optimistisk låsing er en strategi for lesing av data i databasen.
+Dette gjøres ved å lage et ekstra databasefelt. Dersom en skriver
+til databasen vil feltet bli oppgradert. Vi har da en indikator
+på om noen har oppdatert verdiene etter lesing.

@@ -9,12 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="579fd955-e851-478f-bacc-931b6ba7769e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SSL/src/commands" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSL/out/artifacts/SSL_jar/SSL.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSL/out/artifacts/SSL_jar2/SSL.jar" beforeDir="false" afterPath="$PROJECT_DIR$/SSL/out/artifacts/SSL_jar2/SSL.jar" afterDir="false" />
-    </list>
+    <list default="true" id="579fd955-e851-478f-bacc-931b6ba7769e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +59,7 @@
       <workItem from="1584360148518" duration="7000" />
       <workItem from="1584656408507" duration="21000" />
       <workItem from="1584696908242" duration="23000" />
+      <workItem from="1584866888529" duration="10000" />
     </task>
     <servers />
   </component>
