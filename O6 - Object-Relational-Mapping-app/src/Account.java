@@ -2,16 +2,16 @@ import java.util.*;
 import javax.persistence.*;
 import java.io.*;
 
-//TODO: Change query
-@Entity @NamedQuery(name="getBalance", query="SELECT COUNT(o) from Account o")
-
-
+@Entity
 public class Account implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String owner;
     private int accountNumber;
     private double balance;
+
+    @Version
+    private int version;
 
 
     public Account(){}

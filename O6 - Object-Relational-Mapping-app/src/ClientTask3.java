@@ -25,11 +25,8 @@ public class ClientTask3 {
 
             list.get(1).reciveMoney(100);
             //--------------After--------------
-            //list.get(0):    Jorgen's account balance = 600
-            //list.get(1):    Sofie's account balance = 600
-
             /*
-            Running the client in paralelle. First process with a thread sleep and second without.
+            Running the client in paralelle. First thread process sleep and second runs without sleeping.
             Should be:
             //list.get(0):    Jorgen's account balance = 500 (runs 2x times 100 x2 = 200 --> 700-200 = 500)
             //list.get(1):    Sofie's account balance = 700 (runs 2x times 100 x2 = 200 --> 500+200 = 700)
@@ -38,7 +35,8 @@ public class ClientTask3 {
             //list.get(0):    Jorgen's account balance = 600
             //list.get(1):    Sofie's account balance = 600
 
-            We can therefor conclude that there is a lock problem
+            We can therefor conclude that there is a lock problem. When adding @Version in entity class
+            we prevent this problem with optimistic locking.
              */
 
             facade.changeAccount(list.get(0));

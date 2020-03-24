@@ -1,0 +1,7 @@
+Optimistic locking is a strategy for reading data in a database.
+We declare a variable as @Version in an entity class. If there are two transaction
+happening at the same time the last transaction, that is finish, will
+look at the version variable. If the "official" version variable is equal to
+locally stored version variable the transaction can fulfill. On the
+other hand if the version variable is changed the transaction knows that
+the data is corrupt and starts the transaction again.
