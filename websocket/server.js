@@ -41,23 +41,44 @@ const wsServer = net.createServer(connection => {
         //Client has connected to websocket
         if ((data.toString().includes("HTTP/1.1"))) {
             let recivedData = data.toString();
-            console.log("Recived data: ", recivedData);
 
-            //Extracting key from repsonse data
+            //Extracting key from response data
+            let key = recivedData.split("\r\n").find(str => {return str.includes("Sec-WebSocket-Key")}).split(": ")[1];
+            console.log("Recived key:",key);
 
+            //Create the key to create websocket connection
+            let serverKey = Base64.stringify(CryptoJS.SHA1(key + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"));
 
+            //Create the http response
+            let returnValue = "HTTP/1.1 101 Switching Protocols\r\n" +
+                "Upgrade: websocket\r\n" +
+                "Connection: Upgrade\r\n" +
+                "Sec-WebSocket-Accept: " + serverKey.trim() + "\r\n" +
+                "\r\n";
 
-            let key = recivedData.split("\n").find(str => {return str.includes("Sec-WebSocket-Key")}).trim().split(":")[1];
-
-            //We need to remove the last two char's because of \r
-
-            console.log("The websocket key is: ",key, " length: ", key.length);
-
+            //Write the http response
+            connection.write(returnValue);
         }
         else{
-            console.log("Recived data: ", data.toString());
+
+            let bytes = data;
+
+            let length = bytes[1] & 127;
+            let maxStart = 2;
+            let dataStart = maxStart + 4;
+
+            let dataOutput = "";
+
+            for (let i = dataStart; i < dataStart + length; i++) {
+                let byte = bytes[i] ^ bytes[maxStart + ((i - dataStart) % 4)];
+                dataOutput += String.fromCharCode(byte);
+            }
+            console.log("Data from client:", dataOutput);
+
+
         }
     });
+
 
     connection.on('end', () => {
         console.log('Client disconnected');
