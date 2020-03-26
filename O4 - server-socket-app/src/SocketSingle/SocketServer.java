@@ -23,7 +23,6 @@ public class SocketServer {
         PrintWriter writer = new PrintWriter(connection.getOutputStream(), true);
 
 
-        System.out.println("fitte");
         //Send intro to client
         writer.println("Connection successful! \n");
         writer.println("Welcome to the socket calculator!");
