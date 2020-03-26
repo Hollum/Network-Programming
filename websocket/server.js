@@ -40,28 +40,19 @@ const wsServer = net.createServer(connection => {
     connection.on('data', data => {
         //Client has connected to websocket
         if ((data.toString().includes("HTTP/1.1"))) {
-            if (clients.indexOf(connection) === -1){
-                console.log("pushing");
-                clients.push(connection);
-            }
+            let recivedData = data.toString();
+            console.log("Recived data: ", recivedData);
 
-            //Retrieve the key from the http request. Remember to remove \r on the end of the line
-            let clientKey = data.toString()
-                .split("\n")
-                .filter((line) => line.includes("Sec-WebSocket-Key"))[0].split(": ")[1].slice(0, -1);
+            //Extracting key from repsonse data
 
-            //Create the server key we send back
-            let serverKey = Base64.stringify(CryptoJS.SHA1(clientKey + "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"));
 
-            //Create the http response
-            let returnValue = "HTTP/1.1 101 Switching Protocols\r\n" +
-                "Upgrade: websocket\r\n" +
-                "Connection: Upgrade\r\n" +
-                "Sec-WebSocket-Accept: " + serverKey.trim() + "\r\n" +
-                "\r\n";
 
-            //Write the http response
-            connection.write(returnValue);
+            let key = recivedData.split("\n").find(str => {return str.includes("Sec-WebSocket-Key")}).trim().split(":")[1];
+
+            //We need to remove the last two char's because of \r
+
+            console.log("The websocket key is: ",key, " length: ", key.length);
+
         }
         else{
             console.log("Recived data: ", data.toString());
