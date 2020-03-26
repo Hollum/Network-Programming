@@ -74,6 +74,7 @@ const wsServer = net.createServer(connection => {
                 dataOutput += String.fromCharCode(byte);
             }
             console.log("Data from client:", dataOutput);
+            connection.write(Buffer.from(transformData("Hello from server!")));
 
 
         }
@@ -90,3 +91,42 @@ wsServer.on('error', error => {
 wsServer.listen(3001, () => {
     console.log('WebSocket server listening on port 3001');
 });
+
+function transformData(str) {
+    //First byte
+    let typeOfMessage = 81;
+    //Second byte
+    let lengthOfMessage = str.length;
+    //Can only send 127 bytes at a time.
+    if (length > 127){
+        throw new Error("Cannot process more than 127 bytes of sending. Make a buffer");
+    }
+
+    //Length of message to hexadecimal
+    let hexLength = lengthOfMessage.toString(16);
+    if(hexLength.length === 1)
+       hexLength = ("0" + hexLength);
+
+    //The generated Hex string
+    let hexString = typeOfMessage + "" + hexLength + "" + ascii_to_hexa(str);
+    console.log(hexString);
+
+    //toByteArray
+    var byteArray = [];
+    for (var i = 0; i < hexString.length; i += 2) {
+        byteArray.push(parseInt(hexString.substr(i, 2), 16));
+    }
+    return byteArray;
+}
+
+//Ascii to hexadecimal
+function ascii_to_hexa(str)
+{
+    var arr1 = [];
+    for (var n = 0, l = str.length; n < l; n ++)
+    {
+        var hex = Number(str.charCodeAt(n)).toString(16);
+        arr1.push(hex);
+    }
+    return arr1.join('');
+}
