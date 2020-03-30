@@ -33,11 +33,11 @@ httpServer.listen(3000, () => {
 
 let connections = [];
 
-// Incomplete WebSocket server
 const wsServer = net.createServer(connection => {
     console.log('Client connected');
 
     connection.on('data', data => {
+
 
         //Add connection to list of connections if not already exist
         if (connections.indexOf(connection) === -1){
@@ -83,16 +83,20 @@ const wsServer = net.createServer(connection => {
             console.log("Data from client:", dataOutput);
 
             for (let i = 0; i < connections.length; i++){
-                //If the client still exists, and is not this same client we are sending from
-                if (!connections[i].destroyed && connections[i] !== connection){
-                    //Write the data to all other clients than "yourself"
-                    connections[i].write(Buffer.from(transformData(dataOutput)));
+                //Check if data is a FIN package
+                if (Buffer.from(data)[0] !== 136) {
+                    //If the client still exists, and is not this same client we are sending from
+                    if (!connections[i].destroyed && connections[i] !== connection){
+                        //Write data to all other clients
+                        connections[i].write(Buffer.from(transformData(dataOutput)));
+                    }
+                    //If this client
+                    else if (connections[i] === connection){
+                        //Send message to all other clients
+                        connections[i].write(Buffer.from(transformData("Data sent to all other clients!")));
+                    }
                 }
-                //If this is our client
-                else if (connections[i] === connection){
-                    //Give a message that we have sent data to other clients
-                    connections[i].write(Buffer.from(transformData("Data sent to all other clients!")));
-                }
+
             }
 
 
