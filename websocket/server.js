@@ -31,13 +31,20 @@ httpServer.listen(3000, () => {
     console.log('HTTP server listening on port 3000');
 });
 
-let clients = [];
+let connections = [];
 
 // Incomplete WebSocket server
 const wsServer = net.createServer(connection => {
     console.log('Client connected');
 
     connection.on('data', data => {
+
+        //Add connection to list of connections if not already exist
+        if (connections.indexOf(connection) === -1){
+            console.log("adding connection to list of connections");
+            connections.push(connection);
+        }
+
         //Client has connected to websocket
         if ((data.toString().includes("HTTP/1.1"))) {
             let recivedData = data.toString();
@@ -74,20 +81,37 @@ const wsServer = net.createServer(connection => {
                 dataOutput += String.fromCharCode(byte);
             }
             console.log("Data from client:", dataOutput);
-            connection.write(Buffer.from(transformData("Hello from server!")));
+
+            for (let i = 0; i < connections.length; i++){
+                //If the client still exists, and is not this same client we are sending from
+                if (!connections[i].destroyed && connections[i] !== connection){
+                    //Write the data to all other clients than "yourself"
+                    connections[i].write(Buffer.from(transformData(dataOutput)));
+                }
+                //If this is our client
+                else if (connections[i] === connection){
+                    //Give a message that we have sent data to other clients
+                    connections[i].write(Buffer.from(transformData("Data sent to all other clients!")));
+                }
+            }
+
 
 
         }
     });
 
-
     connection.on('end', () => {
         console.log('Client disconnected');
+        connections = connections.filter(e => e !== connection);
+        connection.end();
+        connection.destroy();
     });
 });
+
 wsServer.on('error', error => {
     console.error('Error: ', error);
 });
+
 wsServer.listen(3001, () => {
     console.log('WebSocket server listening on port 3001');
 });
@@ -98,7 +122,7 @@ function transformData(str) {
     //Second byte
     let lengthOfMessage = str.length;
     //Can only send 127 bytes at a time.
-    if (length > 127){
+    if (lengthOfMessage > 127){
         throw new Error("Cannot process more than 127 bytes of sending. Make a buffer");
     }
 
